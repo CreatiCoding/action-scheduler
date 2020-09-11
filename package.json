@@ -1,0 +1,22 @@
+{
+  "name": "action-scheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "node check.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreatiCoding/action-scheduler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CreatiCoding/action-scheduler/issues"
+  },
+  "homepage": "https://github.com/CreatiCoding/action-scheduler#readme",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}

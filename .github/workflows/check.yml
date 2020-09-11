@@ -1,21 +1,4 @@
-# action-scheduler
-
-**action 스케줄러**
-
-깃헙 액션을 활용한 무료 스케줄러
-
-### 활용사례
-
-- node기반 코드 실행(크롤링 후 웹훅 실행)
-
-### 등록된 샘플
-
-- 펫프렌즈 상품 SEO 오류 정보 확인
-
-### 1시간마다 check node 스크립트 코드 실행
-
-```
-name: check-telegram
+name: check
 on:
   push:
   pull_request:
@@ -38,4 +21,3 @@ jobs:
         run: |
           npm install
           npm run check
-```
