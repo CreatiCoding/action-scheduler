@@ -1,4 +1,4 @@
-name: check
+name: petfriends-seo
 on:
   push:
   pull_request:

@@ -1,4 +1,4 @@
-name: check-development-partner
+name: partner-development
 on:
   push:
   pull_request:
