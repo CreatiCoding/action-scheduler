@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "check": "node check.js"
+    "check": "node check.js",
+    "check-development-partner": "node check-development-partner.js"
   },
   "repository": {
     "type": "git",
