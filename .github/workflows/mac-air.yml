@@ -1,4 +1,4 @@
-name: partner-development
+name: mac-air
 on:
   push:
   pull_request:
