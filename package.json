@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "check": "node check.js",
-    "check-development-partner": "node check-development-partner.js"
+    "check-development-partner": "node check-development-partner.js",
+    "check-mac-air": "node check-mac-air.js"
   },
   "repository": {
     "type": "git",
