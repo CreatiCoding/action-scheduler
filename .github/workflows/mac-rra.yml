@@ -1,4 +1,4 @@
-name: mac-air
+name: mac-rra
 on:
   push:
   pull_request:
