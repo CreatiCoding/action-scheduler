@@ -16,9 +16,7 @@ const chat_id = TELEGRAM_CHAT_ID;
 
 (async () => {
   try {
-    const { data } = await axios.get(
-      "https://test-partner-admin.pet-friends.co.kr"
-    );
+    const { data } = await axios.get("https://test.partners.pet-friends.co.kr");
     if (!data || data.indexOf("로그인") === -1) {
       throw new Error("장애 발생");
     }

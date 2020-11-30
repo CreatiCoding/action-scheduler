@@ -6,6 +6,7 @@
   "scripts": {
     "check": "node check.js",
     "check-development-partner": "node check-development-partner.js",
+    "check-production-partner": "node check-production-partner.js",
     "check-mac-air": "node check-mac-air.js",
     "check-mac-rra": "node check-mac-rra.js"
   },
