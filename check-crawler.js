@@ -1,5 +1,6 @@
 const child_process = require("child_process");
 const axios = require("axios");
+const fs = require("fs");
 
 const { TELEGRAM_TOKEN, TELEGRAM_CHAT_ID } = process.env;
 if (!TELEGRAM_TOKEN || !TELEGRAM_CHAT_ID) {
@@ -18,20 +19,21 @@ const CURRENT_TOTAL_COUNT = 217;
 
 (async () => {
   try {
-    const contents = await (async () => {
-      return new Promise((resolve) => {
-        let contents = "";
-        const curl_process = child_process.exec(
-          `curl "https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board"`
-        );
-        curl_process.stdout.on("data", function (data) {
-          contents += data;
-        });
-        curl_process.on("exit", (code) => {
-          resolve(contents);
-        });
-      });
-    })();
+    // const contents = await (async () => {
+    //   return new Promise((resolve) => {
+    //     let contents = "";
+    //     const curl_process = child_process.exec(
+    //       `curl "https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board"`
+    //     );
+    //     curl_process.stdout.on("data", function (data) {
+    //       contents += data;
+    //     });
+    //     curl_process.on("exit", (code) => {
+    //       resolve(contents);
+    //     });
+    //   });
+    // })();
+    const contents = await fs.readFileSync("./result");
     if (!contents) {
       return await axios.get(
         `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
