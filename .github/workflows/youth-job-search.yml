@@ -21,4 +21,5 @@ jobs:
         run: |
           npm install
       - name: npm run
+        run: |
           npm run check-crawler
