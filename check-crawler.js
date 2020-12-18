@@ -14,7 +14,7 @@ if (!TELEGRAM_TOKEN || !TELEGRAM_CHAT_ID) {
 
 const token = TELEGRAM_TOKEN;
 const chat_id = TELEGRAM_CHAT_ID;
-const CURRENT_TOTAL_COUNT = 217;
+const CURRENT_TOTAL_COUNT = 216;
 
 (async () => {
   try {
@@ -25,8 +25,6 @@ const CURRENT_TOTAL_COUNT = 217;
       .get(
         "https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board"
       );
-    console.log(body);
-
     const contents = body;
     if (!contents) {
       return await axios.get(
