@@ -20,6 +20,6 @@ jobs:
       - name: 테스트 텔레그램
         run: |
           npm install
-          curl --version
+          # curl --version
           # curl --ciphers DEFAULT@SECLEVEL=1 "https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board" > result
-          # npm run check-crawler
+          npm run check-crawler
