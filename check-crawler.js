@@ -67,7 +67,7 @@ const CURRENT_TOTAL_COUNT = 217;
     if (Number.isNaN(total_count)) {
       await axios.get(
         `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
-          [contents.substr(0, 200)].join("\n")
+          contents.substr(0, 100)
         )}`
       );
     } else if (total_count !== CURRENT_TOTAL_COUNT) {
