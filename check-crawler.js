@@ -32,7 +32,6 @@ const CURRENT_TOTAL_COUNT = 217;
         });
       });
     })();
-    console.log(contents);
     const s =
       contents.indexOf("<strong>검색건수 <span>") +
       "<strong>검색건수 <span>".length;
@@ -59,17 +58,23 @@ const CURRENT_TOTAL_COUNT = 217;
         };
       });
 
-    const text = encodeURIComponent(
-      [
-        `[청년 구직 활동 지원금] 공지사항 업데이트`,
-        `총 게시글수: ${total_count}`,
-        ...list.map((e) => `[${e.created}] ${e.title}`),
-        `${"https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board"}`,
-      ].join("\n")
-    );
-    if (total_count !== CURRENT_TOTAL_COUNT) {
+    const text = [
+      `[청년 구직 활동 지원금] 공지사항 업데이트`,
+      `총 게시글수: ${total_count}`,
+      ...list.map((e) => `[${e.created}] ${e.title}`),
+      `${"https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board"}`,
+    ].join("\n");
+    if (Number.isNaN(total_count)) {
       await axios.get(
-        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${text}`
+        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
+          [contents.substr(0, 200)].join("\n")
+        )}`
+      );
+    } else if (total_count !== CURRENT_TOTAL_COUNT) {
+      await axios.get(
+        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
+          text
+        )}`
       );
     } else {
       console.log("success", text);
