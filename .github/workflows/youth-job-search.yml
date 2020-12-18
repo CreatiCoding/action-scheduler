@@ -17,9 +17,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: 테스트 텔레그램
+      - name: 의존성 설치
         run: |
           npm install
-          # curl --version
-          # curl --ciphers DEFAULT@SECLEVEL=1 "https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board" > result
+      - name: 스크립트 실행
           npm run check-crawler
