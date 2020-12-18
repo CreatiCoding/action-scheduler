@@ -21,6 +21,6 @@
   "homepage": "https://github.com/CreatiCoding/action-scheduler#readme",
   "dependencies": {
     "axios": "^0.20.0",
-    "curl": "^0.1.4"
+    "curl-request": "^1.1.1"
   }
 }
