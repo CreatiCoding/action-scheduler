@@ -14,7 +14,7 @@ if (!TELEGRAM_TOKEN || !TELEGRAM_CHAT_ID) {
 
 const token = TELEGRAM_TOKEN;
 const chat_id = TELEGRAM_CHAT_ID;
-const CURRENT_TOTAL_COUNT = 216;
+const CURRENT_TOTAL_COUNT = 217;
 
 (async () => {
   try {
