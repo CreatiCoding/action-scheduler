@@ -7,7 +7,7 @@
     "check": "node check.js",
     "check-development-partner": "node check-development-partner.js",
     "check-production-partner": "node check-production-partner.js",
-    "check-crawler": "node check-crawler.js",
+    "check-crawler": "node check-crawler.js"
   },
   "repository": {
     "type": "git",
