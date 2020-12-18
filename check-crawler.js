@@ -32,6 +32,13 @@ const CURRENT_TOTAL_COUNT = 217;
         });
       });
     })();
+    if (!contents) {
+      return await axios.get(
+        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
+          "error of empty"
+        )}`
+      );
+    }
     const s =
       contents.indexOf("<strong>검색건수 <span>") +
       "<strong>검색건수 <span>".length;
@@ -57,7 +64,6 @@ const CURRENT_TOTAL_COUNT = 217;
           created: e.substring(created_start, created_end).trim(),
         };
       });
-
     const text = [
       `[청년 구직 활동 지원금] 공지사항 업데이트`,
       `총 게시글수: ${total_count}`,
