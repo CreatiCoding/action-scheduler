@@ -17,8 +17,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: 의존성 설치
+      - name: npm install
         run: |
           npm install
-      - name: 스크립트 실행
+      - name: npm run
           npm run check-crawler
