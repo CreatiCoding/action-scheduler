@@ -65,11 +65,12 @@ const CURRENT_TOTAL_COUNT = 218;
       `${"https://www.youthcenter.go.kr/board/boardList.do?bbsNo=3&pageUrl=board/board"}`,
     ].join("\n");
     if(contents.indexOf('404-Not Found')){
-      return await axios.get(
-        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
-          "404 contents"
-        )}`
-      );
+      return console.log("404 contents");
+      // return await axios.get(
+      //   `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
+      //     "404 contents"
+      //   )}`
+      // );
     }else if (Number.isNaN(total_count)) {
       await axios.get(
         `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(
